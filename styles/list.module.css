@@ -1,0 +1,159 @@
+@font-face {
+    font-family: regularFont;
+    src: url('../assets/fonts/Eina\ 01\ Regular.otf');
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+    /* box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2); */
+}
+.header {
+    padding:32px 32px 24px;
+    text-align: center;
+    border-bottom: 1px solid rgb(219,219,219);
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 800;
+    font-family: regularFont;
+}
+.subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color:rgb(142,142,142);
+    font-family: regularFont;
+}
+
+
+/* table */
+.tableContainer {
+    padding:0;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tableHead {
+    background-color: rgb(250,250,250);
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    border-bottom: 1px solid rgb(219,219,219);
+}
+.tableHead th {
+    padding:20px 0;
+    text-align: left;
+    font-family: regularFont;
+    font-size: 12px;
+    font-weight: 600;
+    color:rgb(88, 102, 126);
+}
+.tableHead .numbers, .tableBody .numbers{
+    text-align: right;
+}
+.tableHead .chart {
+    text-align: center;
+}
+.tableBody tr {
+    border-bottom: 1px solid rgb(219,219,219);
+}
+.tableBody td {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: regularFont;
+    color:rgb(38,38,38);
+    padding:20px 0;
+}
+.tableBody tr:nth-child(even){
+    background-color: rgb(250,250,250);
+    background-color: aliceblue;
+}
+.tableBody tr:hover {
+    background-color: rgb(250,250,250);
+}
+.tableBody .marketCap, .tableBody .circulating{
+    color:rgb(142,142,142);
+}
+.tableBody .chart {
+    text-align: center;
+}
+
+.rank, .tableHead .rank  {
+    width:60px;
+    text-align: center;
+}
+.link {
+    display: flex;
+    align-items: center;
+}
+.link span {
+    margin-left: 8px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.flex span {
+    margin-left: 4px;
+}
+
+.increase {
+    color:#16c784 !important;
+}
+.decrease {
+    color:#ea3943 !important;
+}
+
+.price span {
+    font-size: 13px !important;
+}
+.stack {
+    display: flex;
+    flex-direction: column;
+}
+.stack_left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.rank .stack_left {
+    justify-content: center;
+}
+.stack span {
+    font-size: 10px;
+}
+.stack h4 {
+    font-size: inherit;
+}
+.circulating.numbers {
+    padding-right: 6px;
+}
+.symbol {
+    color:rgb(142,142,142);
+    text-transform: uppercase;
+}
+td.circulating span.symbol {
+    color:rgb(38,38,38);
+    margin-left: 6px;
+}
+.span {
+    margin-top: 6px;
+}
+
+
+@media screen and (max-width:900px) {
+    .tableContainer {
+        width:100%;
+        overflow-x:scroll;
+    }
+    .tableContainer::-webkit-scrollbar{
+        display: none;
+    }
+    .table {
+        min-width: 1000px;
+        overflow: auto;
+    }
+}

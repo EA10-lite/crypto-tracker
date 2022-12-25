@@ -1,0 +1,65 @@
+@font-face {
+    font-family: bold;
+    src: url('../assets/fonts/Eina\ 01\ Bold.otf');
+}
+@font-face {
+    font-family: regularFont;
+    src: url('../assets/fonts/Eina\ 01\ Regular.otf');
+}
+
+.container {
+    margin: auto;
+    margin-bottom: 3rem;
+    max-width: 100%;
+}
+
+.title {
+    font-family: bold;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.title:nth-child(even){
+    color:rgb(56, 97, 251);
+    margin-bottom: 2rem;
+}
+.subtitle {
+    font-size: 1rem;
+    text-align: center;
+    font-family: regularFont;
+    max-width: 500px;
+    margin:auto;
+    margin: 16px auto 32px;
+    font-weight: 800;
+}
+@media screen and (min-width: 26.125em){
+    .title {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .title {
+        font-size: 3rem;
+        line-height: 3.9rem;
+    }
+    .subtitle {
+        margin: auto;
+        max-width: 70%;
+    }
+}
+@media screen and (min-width: 64em) {
+    .title {
+        font-size: 4rem;
+        line-height: 4.9rem;
+    }
+    .subtitle {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        margin: auto;
+        max-width: 70%;
+    }
+}

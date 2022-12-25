@@ -1,0 +1,30 @@
+@font-face {
+    font-family: regularFont;
+    src: url('../assets/fonts/Eina\ 01\ Regular.otf');
+}
+.container {
+    text-align: center;
+    padding:1.25rem 1rem;
+    background-color: white;
+    border-top: 1px solid rgb(219,219,219);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.link {
+    text-transform: uppercase;
+    font-family: regularFont;
+    font-size: .8rem;
+    font-weight: 600;
+}
+.container span {
+    font-family: regularFont;
+}
+
+@media screen and (min-width: 93.5em) {
+    .container {
+        max-width: 93.5em;
+        margin: auto;
+    }
+}

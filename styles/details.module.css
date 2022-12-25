@@ -1,0 +1,381 @@
+@font-face {
+    font-family: regularFont;
+    src: url('../assets/fonts/Eina\ 01\ Regular.otf');
+}
+@font-face {
+    font-family: semiBold;
+    src: url('../assets/fonts/Eina\ 01\ SemiBold.otf');
+}
+.header {
+    margin-bottom: 2rem;
+}
+.left ul {
+    display: flex;
+}
+.left ul .label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: regularFont;
+    color:rgb(142,142,142);
+}
+.left ul .label.id {
+    color:rgb(38,38,38);
+    text-transform: capitalize;
+}
+.border {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1.875rem;
+    margin-bottom: 1.875rem;
+}
+.info {
+    grid-column: 1 / 3;
+}
+.main {
+    display: flex;
+    align-items: center;
+}
+.coinLogo {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img {
+    border-radius: 50%;
+}
+.coinName {
+    font-size: 1.5rem;
+    font-family: semiBold;
+    font-weight: 600;
+    display: flex;
+}
+.coinRank {
+    font-size: 0.75rem;
+    color:lightgray;
+    margin-left: 0.25rem;
+    margin-top: 0.325rem;
+}
+.price {
+    display: flex;
+    margin-left: 3.25rem;
+    margin-bottom: 1rem;
+}
+.h2 {
+    font-size: 38px;
+    font-weight: 600;
+    font-family: semiBold;
+    margin-right: 1rem;
+}
+.price span {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: regularFont;
+    display: flex;
+    align-items: center;
+}
+.tagsContainer .title {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: regularFont;
+    margin-bottom: .5rem;
+}
+.tags {
+    display: flex;
+    align-items: center;
+}
+.tag {
+    background-color: lightgray;
+    border-radius: 1.25rem;
+    margin-right: .625rem;
+    padding:.125rem .325rem .325rem;
+}
+.tag .link {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: regularFont;
+    padding:0;
+}
+
+
+
+
+
+
+
+
+.trendingContainer {
+    grid-column: 3 / 5;
+    background-color: white;
+    border-radius: .25rem;
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+}
+.trendingContainer::-webkit-scrollbar {
+    background-color: white;
+    height:.25rem;
+}
+.trendingContainer::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: .25rem;
+}
+
+.trend {
+    min-width:11.25rem;
+    border-right: 1px solid rgb(250,250,250);
+    padding:.625rem 1.25rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.trend.last {
+    border-right: none;
+}
+.trendHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.trendLogo {
+    width:1.875rem;
+    height:1.875rem;
+    border-radius: 50%;
+    background-color: crimson;
+}
+.rank {
+    font-size: .875rem;
+    color:lightgray;
+    font-family: regularFont;
+    font-weight: 600;
+}
+.name {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: regularFont;
+}
+.trend .symbol {
+    font-size: .875rem;
+    font-weight: 600;
+    font-family: regularFont;
+    color:lightgray;
+}
+
+
+
+
+
+
+
+
+.global {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: white;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    grid-column: 1 / 5;
+}
+.item {
+    grid-auto-rows: minmax(9.375rem);
+    border:1px solid rgb(250,250,250);
+    padding:1rem 1.5rem 2rem;
+}
+
+.itemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.625rem
+}
+.itemTitle {
+    font-size: .875rem;
+    font-weight: 600;
+    font-family: regularFont;
+}
+
+.big {
+    font-size: 1.54rem;
+    font-family: semiBold;
+    font-weight: 400;
+}
+.big span {
+    color:lightgray;
+}
+.big .symbol {
+    margin-left: .5rem;
+}
+.small {
+    font-size: .875rem;
+    font-weight: 600;
+    font-family: regularFont;
+    margin-top: .5rem;
+}
+.small div {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/* stats */
+.statsContainer {
+    grid-column:  4 /5;
+    background-color: white;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.statsHeader {
+    border-bottom: 1px solid rgb(219,219,219);
+    padding:1.25rem;
+    display: flex;
+    align-items: center;
+}
+.statsHeader .logo {
+    width:2.25rem;
+    height:2.25rem;
+    border-radius: 1.125rem;
+    border:1px solid rgb(219,219,219);
+    margin-right: 1rem;
+}
+
+.statsHeader .h4 {
+    font-size: .875rem;
+    color:lightgray;
+    font-family: regularFont;
+}
+.statsHeader .h5 {
+    font-family: regularFont;
+    font-size: .875rem;
+    font-weight: 600;
+}
+.stats {
+    padding:1.25rem;
+}
+.stat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(219,219,219);
+    padding:1rem 0;
+}
+.stat .label {
+    font-size: .75rem;
+    font-weight: 600;
+    color:lightgray;
+    font-family: regularFont;
+}
+.value {
+    font-size: .875rem;
+    font-weight: 600;
+    font-family: regularFont;
+}
+
+
+/* charts */
+.charts {
+    background-color: white;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 4;
+    justify-content: space-between;
+    padding:.75rem 1rem;
+}
+.chartHeader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    margin-left: .625rem;
+    margin-right: .625rem;
+    margin-top: 1rem;
+}
+.chartType {
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: .625rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 500px;
+    padding:0.325rem 1rem;
+}
+
+.type {
+    font-size: .875rem;
+    font-family: regularFont;
+    font-weight: 600;
+    padding:.325rem 1rem;
+}
+.active {
+    background-color: white;
+    border-radius: .25rem;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.chart {
+    flex-grow: 1;
+    height: 600px;
+}
+
+@media screen and (max-width: 48em) {
+    .trendingContainer {
+        display: none;
+    }
+    .charts, .statsContainer, .info, .global { 
+        grid-column: 1 / 6;
+    }
+    .item1 {
+        grid-column: 1 / 3;
+    }
+    .item2 {
+        grid-column: 3 / 5;
+    }
+    
+    .item3 {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+    .item4 {
+        grid-column: 3 / 5;
+        grid-row: 2 / 3;
+    }
+    
+}
+
+@media screen and (max-width: 30rem) {
+    .big {
+        font-size: 1rem;
+    }
+    .price {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 22.5rem) {
+    .item1, .item2, .item3, .item4 {
+        grid-column: 1 / 6;
+    }
+    .item1 {
+        grid-row: 1 / 2;
+    }
+    .item2 {
+        grid-row: 2 / 3;
+    }
+    .item3 {
+        grid-row: 3 / 4;
+    }
+    .item4 {
+        grid-row: 4 / 5;
+    }
+
+}

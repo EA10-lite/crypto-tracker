@@ -1,0 +1,45 @@
+@font-face {
+    font-family: regularFont;
+    src: url('../../assets/fonts/Eina\ 01\ Regular.otf');
+}
+
+
+
+.trend {
+    min-width:250px;
+    border-right: 1px solid rgb(250,250,250);
+    padding:10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aliceblue;
+    border-radius: 4px;
+    overflow: auto;
+    background-color: #007DB9;;
+}
+.trend.last {
+    border-right: none;
+}
+.trendHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.rank {
+    font-size: 14px;
+    color:lightgray;
+    font-family: regularFont;
+    font-weight: 600;
+}
+.name {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: regularFont;
+}
+.trend .symbol {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: regularFont;
+    color:lightgray;
+}
