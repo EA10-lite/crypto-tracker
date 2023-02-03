@@ -1,13 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './dropdown.module.css';
+import styles from '../styles/dropdown.module.css';
 
 export default function Dropdown({ result }){
     return (
         <div className={styles.container}>
+            { !result && result.length <= 0 && <div className={styles.resultContainer}> No Search Result! </div> }
             { result && result.slice(0,10).map(data=> (
-                <Link href={`/search/${data.id}`} key={data.id}>
+                <Link href={`/coin/${data.id}`} key={data.id}>
                     <a className={styles.resultContainer}>
                         <div className={styles.details}>
                             <Image src={data.thumb} alt='' width={36} height={36} className={styles.img} />

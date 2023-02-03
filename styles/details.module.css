@@ -35,6 +35,7 @@
 }
 .info {
     grid-column: 1 / 3;
+
 }
 .main {
     display: flex;
@@ -101,77 +102,6 @@
     font-family: regularFont;
     padding:0;
 }
-
-
-
-
-
-
-
-
-.trendingContainer {
-    grid-column: 3 / 5;
-    background-color: white;
-    border-radius: .25rem;
-    overflow: auto;
-    width: 100%;
-    display: flex;
-    overflow: auto;
-}
-.trendingContainer::-webkit-scrollbar {
-    background-color: white;
-    height:.25rem;
-}
-.trendingContainer::-webkit-scrollbar-thumb {
-    background-color: lightgray;
-    border-radius: .25rem;
-}
-
-.trend {
-    min-width:11.25rem;
-    border-right: 1px solid rgb(250,250,250);
-    padding:.625rem 1.25rem ;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.trend.last {
-    border-right: none;
-}
-.trendHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-.trendLogo {
-    width:1.875rem;
-    height:1.875rem;
-    border-radius: 50%;
-    background-color: crimson;
-}
-.rank {
-    font-size: .875rem;
-    color:lightgray;
-    font-family: regularFont;
-    font-weight: 600;
-}
-.name {
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: regularFont;
-}
-.trend .symbol {
-    font-size: .875rem;
-    font-weight: 600;
-    font-family: regularFont;
-    color:lightgray;
-}
-
-
-
-
-
 
 
 

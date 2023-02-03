@@ -13,9 +13,9 @@
 }
 .general {
     border-bottom: 1px solid rgb(219,219,219);
-    padding:20px;
+    padding:1.25rem;
     background-color: white;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 .general .content {
     display: flex;
@@ -38,40 +38,40 @@
 .flex{
     display: flex;
     align-items: center;
-    margin-right: 32px;
+    margin-right: 2rem;
     flex-wrap: nowrap;
 }
 .flex1 {
-    min-width: 162px;
+    min-width: 10.125rem;
 }
 .flex2 {
-    min-width: 236px;
+    min-width: 14.75rem;
 }
 .flex3 {
-    min-width: 226px;
+    min-width: 14.125rem;
 }
 .flex4 {
-    min-width: 260px;
+    min-width: 16.25rem;
 }
 .flex5 {
-    min-width: 200px;
+    min-width: 12.5rem;
     margin-right: 0 !important;
 }
 .flex6 {
-    min-width: 108px;
+    min-width: 6.75rem;
 }
 .title {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: sans-serif;
     font-family: semiBold;
     color:rgb(56, 97, 251);
 }
 .subtitle {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 600;
     color:rgb(88, 102, 126);;
-    margin-right: 10px;
+    margin-right: 0.625rem;
     font-family: sans-serif;
     font-family: regularFont;
 }
@@ -80,10 +80,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-bottom: 1.875rem;
+    padding-bottom: 0.625rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     border-bottom: 1px solid rgb(219,219,219);
 }
 .nav .left {
@@ -93,7 +93,7 @@
     width: 100%;
 }
 .logo {
-    font-size: 16px;
+    font-size: 1rem;
     font-family: regularFont;
     font-weight: 900;
     text-transform: uppercase;
@@ -111,15 +111,15 @@
 .searchInput {
     background-color: white;
     width:270px;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
     display: flex;
-    padding:10px 16px;
-    margin-left: 64px;
+    padding:0.625rem 1rem;
+    margin-left: 4rem;
 }
 .searchInput form {
     width:100%;
-    margin-left: 8px;
+    margin-left: .5rem;
 }
 .searchIcon {
     font-weight: 900;
@@ -131,47 +131,47 @@
     width: 100%;
     font-weight: 600;
     font-family: regularFont;
-    font-size: 14px;
+    font-size: 0.875rem;
     color:rgb(142,142,142);
 }
 .navLink {
-    margin-left: 64px;
+    margin-left: 4rem;
 }
 .link {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     font-family: regularFont;
-    padding-bottom: 4px;
+    padding-bottom: .25rem;
 }
 .link:hover {
     border-bottom: 2px solid black;
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width:75rem) {
     .general, .nav{
-        padding-left: 95px;
-        padding-right: 95px;
+        padding-left: 5.9375rem;
+        padding-right: 5.9375rem;
     }
 }
-
-@media screen and (max-width:768px) {
-    .nav .left {
-        flex-direction: column;
-    }
-    .searchInput {
-        margin-top: 10px;
-        margin-left: 0;
-    }
-
-    .searchArea {
-        display: none;
-    }
-}
-
 
 @media screen and (min-width: 93.5em) {
     .container {
         max-width: 93.5em;
         margin: auto;
+    }
+}
+
+
+@media screen and (max-width: 48em) {
+    .nav .left {
+        flex-direction: column;
+    }
+    .searchInput {
+        margin-top: .625rem;
+        margin-left: 0;
+    }
+
+    .searchArea {
+        display: none;
     }
 }

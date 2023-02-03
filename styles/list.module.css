@@ -9,18 +9,18 @@
     /* box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2); */
 }
 .header {
-    padding:32px 32px 24px;
+    padding:2rem 2rem 1.5rem;
     text-align: center;
     border-bottom: 1px solid rgb(219,219,219);
 }
 
 .title {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 800;
     font-family: regularFont;
 }
 .subtitle {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     color:rgb(142,142,142);
     font-family: regularFont;
@@ -43,10 +43,10 @@
     border-bottom: 1px solid rgb(219,219,219);
 }
 .tableHead th {
-    padding:20px 0;
+    padding:1.25rem 0;
     text-align: left;
     font-family: regularFont;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 600;
     color:rgb(88, 102, 126);
 }
@@ -60,11 +60,11 @@
     border-bottom: 1px solid rgb(219,219,219);
 }
 .tableBody td {
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 600;
     font-family: regularFont;
     color:rgb(38,38,38);
-    padding:20px 0;
+    padding:1.25rem 0;
 }
 .tableBody tr:nth-child(even){
     background-color: rgb(250,250,250);
@@ -81,7 +81,7 @@
 }
 
 .rank, .tableHead .rank  {
-    width:60px;
+    width:3.75rem;
     text-align: center;
 }
 .link {
@@ -89,7 +89,7 @@
     align-items: center;
 }
 .link span {
-    margin-left: 8px;
+    margin-left: 0.5rem;
 }
 .flex {
     display: flex;
@@ -97,7 +97,7 @@
     justify-content: flex-end;
 }
 .flex span {
-    margin-left: 4px;
+    margin-left: 0.25rem;
 }
 
 .increase {
@@ -123,13 +123,13 @@
     justify-content: center;
 }
 .stack span {
-    font-size: 10px;
+    font-size: 0.625rem;
 }
 .stack h4 {
     font-size: inherit;
 }
 .circulating.numbers {
-    padding-right: 6px;
+    padding-right: 0.375rem;
 }
 .symbol {
     color:rgb(142,142,142);
@@ -137,10 +137,10 @@
 }
 td.circulating span.symbol {
     color:rgb(38,38,38);
-    margin-left: 6px;
+    margin-left: 0.375rem;
 }
 .span {
-    margin-top: 6px;
+    margin-top: 0.375rem;
 }
 
 

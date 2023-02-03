@@ -1,6 +1,6 @@
 @font-face {
     font-family: regularFont;
-    src: url('../../assets/fonts/Eina\ 01\ Regular.otf');
+    src: url('../assets/fonts/Eina\ 01\ Regular.otf');
 }
 .container {
     position: absolute;
@@ -9,7 +9,7 @@
     width: 25rem;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
     border-radius: 0.625rem;
-    min-height: 31.25rem;
+    max-height: 31.25rem;
     z-index: 10000;
     overflow: auto;
     right: 0;
@@ -53,8 +53,6 @@
     font-weight: 600;
     color:rgb(142,142,142)
 }
-
-
 .loading {
     align-items: center;
     display: flex;

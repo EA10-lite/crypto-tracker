@@ -3,7 +3,7 @@
 import Details from "../../component/details";
 
 export const getStaticPaths = async () => {
-    const res = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&page=1&sparkline=false&price_change_percentage=24h%2C7d")
+    const res = await fetch("https://api.coingecko.com/api/v3/coins/list")
     const data = await res.json()
 
     const paths = data.map(coin => {
@@ -37,8 +37,6 @@ export const getStaticProps = async (context) => {
 }
 
 export default function CoinDetails({ data, chart_data }){
-    console.log(data);
-    console.log(chart_data);
 
     return (
         <>

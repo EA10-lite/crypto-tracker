@@ -1,15 +1,15 @@
 import React, {  useState }  from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from '../styles/details.module.css';
 
-import CandleStick from './chart/cryptochart';
+// components
+import CandleStick from './cryptochart';
 
 // icons
 import { MdInfo, MdArrowDropUp, MdArrowDropDown } from 'react-icons/md';
 
-// data
-import { trending  } from '../data/coin_data';
+// utils
+import intToString from '../utils/converter';
 
 export default function Details({ data, chart_data}){
     const formatter = new Intl.NumberFormat('en');
@@ -64,24 +64,6 @@ export default function Details({ data, chart_data}){
                         </div>
                     </div>
                     
-                    {/* trending */}
-                    <div className={styles.trendingContainer}>
-                        {trending.map((trend,i)=> ( 
-                            <div className={`${styles.trend} ${i === trending.length - 1 &&styles.last}`} key={trend.rank}>
-                                <div className={styles.trendHeader}>
-                                    <div className={styles.trendLogo} />
-                                    <h4 className={styles.rank}> #{ trend.rank } </h4>
-                                </div>
-                                <Link href={`/coin/${trend.name}`}>
-                                    <a className={styles.trendDetails}>
-                                        <h4 className={styles.name}> { trend.name } </h4>
-                                        <h5 className={styles.symbol}> { trend.symbol } </h5>
-                                    </a>
-                                </Link>
-                            </div>
-                        ))}
-                    </div>
-                    
                     {/* global */}
                     <div className={styles.global}>
                         <div className={`${styles.item} ${styles.item1}`}>
@@ -91,18 +73,18 @@ export default function Details({ data, chart_data}){
                             </div>
 
                             <div className={styles.numbers}>
-                                <h3 className={styles.big}> <span> $ </span> { formatter.format(data.market_data.market_cap.usd)} </h3>
+                                <h3 className={styles.big}> <span> $ </span> { intToString(formatter.format(data.market_data.market_cap.usd))} </h3>
                                 <h6 className={styles.small}>
                                     { data.market_data.market_cap_change_percentage_24h > 0 ? (
                                         <div>
                                             <MdArrowDropUp color="#16c784" size={20} />
-                                            <span style={{color:"#16c784"}}> { formatter.format(data.market_data.market_cap_change_percentage_24h
-                                            ) }% </span>
+                                            <span style={{color:"#16c784"}}> { intToString(formatter.format(data.market_data.market_cap_change_percentage_24h
+                                            )) }% </span>
                                         </div>
                                     ) : (
                                         <>
                                             <MdArrowDropDown color="#ea3943" size={20} />
-                                            <span style={{color:"#ea3943"}}> { formatter.format(data.market_data.market_cap_change_percentage_24h) } </span>
+                                            <span style={{color:"#ea3943"}}> { intToString(formatter.format(data.market_data.market_cap_change_percentage_24h)) } </span>
                                         </>
                                     )}
                                 </h6>
@@ -114,7 +96,7 @@ export default function Details({ data, chart_data}){
                                 <MdInfo size={24} color="lightgray" />
                             </div>
                             <div className={styles.numbers}>
-                                <h3 className={styles.big}> <span> $ </span> { formatter.format(data.market_data.fully_diluted_valuation.usd)} </h3>
+                                <h3 className={styles.big}> <span> $ </span> { intToString(formatter.format(data.market_data.fully_diluted_valuation.usd))} </h3>
                                 
                             </div>
                         </div>
@@ -124,7 +106,7 @@ export default function Details({ data, chart_data}){
                                 <MdInfo size={24} color="lightgray" />
                             </div>
                             <div className={styles.numbers}>
-                                <h3 className={styles.big}> <span> $ </span> { formatter.format(data.market_data.total_volume.usd)} </h3>
+                                <h3 className={styles.big}> <span> $ </span> { intToString(formatter.format(data.market_data.total_volume.usd))} </h3>
                             </div>
                         </div>
                         <div className={`${styles.item} ${styles.item4}`}>
@@ -133,9 +115,9 @@ export default function Details({ data, chart_data}){
                                 <MdInfo size={24} color="lightgray" />
                             </div>
                             <div className={styles.numbers}>
-                                <h3 className={styles.big}> <span> $ </span> { formatter.format(data.market_data.circulating_supply)} </h3>
+                                <h3 className={styles.big}> <span> $ </span> { intToString(formatter.format(data.market_data.circulating_supply)) } </h3>
                                 <h6 className={styles.small}>
-                                    <span style={{color:"lightgray"}}>${ formatter.format(data.market_data.total_supply) }</span>
+                                    <span style={{color:"lightgray"}}>${ intToString(formatter.format(data.market_data.total_supply)) }</span>
                                 </h6>
                             </div>
                         </div>
@@ -170,7 +152,9 @@ export default function Details({ data, chart_data}){
                      {/* Stats */}
                     <div className={styles.statsContainer}>
                         <div className={styles.statsHeader}>
-                            <div className={styles.logo}></div>
+                            <div className={styles.logo}>
+                                <Image src={ data?.image?.thumb } alt='' width={36} height={36} className={styles.img} />
+                            </div>
                             <div>
                                 <h4 className={styles.h4}> { data.symbol} </h4>
                                 <h5 className={styles.h5}> Price statistics</h5>
