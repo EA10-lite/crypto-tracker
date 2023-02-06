@@ -107,31 +107,15 @@ export default function Header(){
 
             {/* nav */}
 
-            <nav className={styles.nav}>
+            <div className={styles.nav}>
                 <div className={styles.left}>
                     <div className={styles.logo}>
                         <Link href="/">
                             <a className={styles.logo}> Coinsgrate </a>
                         </Link>
                     </div>
-                    <div className={styles.searchArea}>
-                        <div className={styles.searchInput}>
-                            <FiSearch size={20} className={styles.searchIcon} color= "lightgray" />
-                            <form onSubmit={handleSubmit}>
-                                <input 
-                                    type="text" placeholder='Search' 
-                                    className={styles.input} name="search" value={searchInput} 
-                                    onChange={(e)=> setSearchInput(e.target.value)}
-                                />
-                            </form>
-                            { searchInput.length > 0 && <MdCancel size={20} className={styles.icon} color="lightgray" onClick={handleCancel} /> }
-                        </div>
-                        <div className={styles.dropdown}>
-                            { searchInput.length > 0 && <Dropdown result={result.coins ? result.coins : []} /> }
-                        </div>
-                    </div>
                 </div>
-            </nav>
+            </div>
         </div>
     )
 }
