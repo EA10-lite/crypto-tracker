@@ -73,7 +73,7 @@ export default function List({ data }){
                             </tr>
                         </thead>
                         <tbody className={styles.tableBody}>
-                            { data && data.map(item=> (
+                            { data && data?.map(item=> (
                                 <tr key={item.id}>
                                     <td className={styles.rank}> { item.market_cap_rank } </td>
                                     <td className={styles.name}>

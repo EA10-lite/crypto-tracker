@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "new-script": "your-command --openssl-legacy-provider"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^4.30.3",
     "apexcharts": "^3.35.3",
     "axios": "^0.27.2",
     "chart.js": "^3.8.0",

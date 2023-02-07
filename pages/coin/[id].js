@@ -6,7 +6,7 @@ export const getStaticPaths = async () => {
     const res = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&page=1&sparkline=false&price_change_percentage=24h%2C7d");
     const data = await res.json();
 
-    const paths = data.map(coin => {
+    const paths = data?.map(coin => {
         return {
             params: { id: coin.id.toString() }
         }
